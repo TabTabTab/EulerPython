@@ -9,9 +9,5 @@ def isMultipleOf35(number):
 		return False;
 
 
-def listAllValuesUpTo(max):
-	list=[x for x in range(max) if isMultipleOf35(x)];
-	return list;
-	
-val=listAllValuesUpTo(1000)
-print(sum(val))
+list=[x for x in range(1000) if isMultipleOf35(x)];
+print(sum(list));
