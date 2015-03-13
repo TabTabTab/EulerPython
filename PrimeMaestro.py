@@ -36,4 +36,16 @@ def getPrimes(max):
 			primes.append(i);
 	return primes;
 
-
+def getXFirstPrimes(amount):
+	primes=[];
+	i=1;
+	while(len(primes)<amount):
+		i+=1;
+		isPrime=True;
+		for x in primes:
+			if i%x==0:
+				isPrime=False;
+				break;
+		if isPrime:
+			primes.append(i);
+	return primes;
