@@ -14,7 +14,7 @@ def concatonatePrimeDicts(dict1,dict2):
 
 
 factorDict={};
-for v in range(1,20):
+for v in range(1,21):
 	tempDict=PrimeMaestro.primeFactorDict(v);
 	factorDict=concatonatePrimeDicts(factorDict,tempDict);
 print(NumericsMaestro.dictProduct(factorDict));
