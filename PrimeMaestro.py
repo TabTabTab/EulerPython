@@ -14,6 +14,16 @@ def primeFactorsOf(value):
 
 	return primeFactors;
 
+def primeFactorDict(value):
+	primeList=primeFactorsOf(value);
+	primeDict={};
+	for p in primeList:
+		if p in primeDict:
+			primeDict[p]+=1;
+		else:
+			primeDict[p]=1;
+	return primeDict;
+
 def getPrimes(max):
 	primes=[];
 	for i in range(2,max+1):
