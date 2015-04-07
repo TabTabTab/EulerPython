@@ -1,4 +1,4 @@
-# fibo module
+ # fibo module
 
 
 def primeFactorsOf(value):
@@ -34,6 +34,13 @@ def getPrimes(max):
 				break;
 		if isPrime:
 			primes.append(i);
+	return primes;
+
+def getPrimes2(max):
+	potentials=[1:max];
+	primes=[];
+	
+	
 	return primes;
 
 def getXFirstPrimes(amount):
