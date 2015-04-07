@@ -24,6 +24,16 @@ def primeFactorDict(value):
 			primeDict[p]=1;
 	return primeDict;
 
+def primeFactorDictUsingPrimeList(value,primeList):
+	primeDict={};
+	for p in primeList:
+		if p in primeDict:
+			primeDict[p]+=1;
+		else:
+			primeDict[p]=1;
+	return primeDict;
+
+
 def getPrimes(max):
 	primes=[];
 	for i in range(2,max+1):
@@ -36,12 +46,15 @@ def getPrimes(max):
 			primes.append(i);
 	return primes;
 
-def getPrimes2(max):
-	potentials=[1:max];
-	primes=[];
-	
-	
-	return primes;
+def getPrimesBelow(n):
+	hasPotential=[True]*n;
+	for i in xrange(3,int(n**0.5)+1,2):
+		if(hasPotential[i]):
+			fromIndex=i*i;
+			stepSize=i*2;
+			listLength=(n-1-fromIndex)/stepSize+1;
+			hasPotential[fromIndex::stepSize]=[False]*listLength;
+	return [2] + [i for i in xrange(3,n,2) if hasPotential[i]];
 
 def getXFirstPrimes(amount):
 	primes=[];
