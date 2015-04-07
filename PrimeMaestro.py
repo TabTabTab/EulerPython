@@ -24,6 +24,16 @@ def primeFactorDict(value):
 			primeDict[p]=1;
 	return primeDict;
 
+def primeFactorDictUsingPrimeList(value,primeList):
+	primeDict={};
+	for p in primeList:
+		if p in primeDict:
+			primeDict[p]+=1;
+		else:
+			primeDict[p]=1;
+	return primeDict;
+
+
 def getPrimes(max):
 	primes=[];
 	for i in range(2,max+1):
