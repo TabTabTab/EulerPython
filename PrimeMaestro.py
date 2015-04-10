@@ -1,6 +1,5 @@
  # fibo module
 
-
 def primeFactorsOf(value):
 	primeFactors=[];
 	i=2;
@@ -55,6 +54,7 @@ def getPrimesBelow(n):
 			listLength=(n-1-fromIndex)/stepSize+1;
 			hasPotential[fromIndex::stepSize]=[False]*listLength;
 	return [2] + [i for i in xrange(3,n,2) if hasPotential[i]];
+
 
 def getXFirstPrimes(amount):
 	primes=[];
